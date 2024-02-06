@@ -1,0 +1,179 @@
+@font-face {
+    font-family: gamer;
+    src: url('static/fonts/PressStart2P-Regular.ttf');
+}
+
+
+body {
+    background-image: url('static/images/background.png');
+    height: 600vh;
+    color: white;
+    font-family: gamer;
+}
+
+
+.mainText {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 33px;
+    background-color: rgb(25, 25, 25);
+}
+
+.bgg {
+    background-color: rgb(32, 32, 32);
+}
+
+.bg {
+    background-color: rgb(25, 25, 25);
+}
+
+.purple {
+    color: rgb(214, 0, 255);
+}
+
+#scroll {
+    margin-top: 120px;
+    font-size: 15px;
+}
+
+#space {
+    padding-top: 20%;
+}
+
+#gurl {
+    font-size: 10px;
+    padding-left: 10px ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#t {
+    width: 20%;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.shh {
+    font-size: 10px;
+}
+
+button {
+    background-color: rgb(32, 32, 32);
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+button img {
+    width: 100px;
+    height: auto;
+}
+
+.center {
+    position: absolute;
+    margin-top: auto;
+}
+
+.navbar {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    transition: opacity 1s ease-in-out;
+    display: block;
+    opacity: 1;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    padding-top: 90px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#stuff {
+    width: 50%;
+    padding: 10px;
+}
+
+#page1 {
+    padding-top: 17vh;
+}
+
+.vertical-center {
+    padding-top: 50%;
+  }
+
+#p1t {
+    width: 30vb;
+    text-align: center;
+}
+
+.containerr {
+    display: flex;
+    padding-bottom: 15px;
+  }
+
+.image-container img {
+max-width: 100%;
+height: auto;
+/* Additional styling for the image if needed */
+}
+
+p {
+    font-size: 15px;
+}
+
+.sm_img {
+    width: 120px;
+    height: auto;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.rl_trans {
+    opacity: 0;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);
+}
+
+.thirds {
+    max-height: 33%;
+}
+
+.smallish {
+    height: 300px;
+    width: auto;
+}
+
+.horizontal-center {
+    margin-left: 50px;
+}
+
+.small_text {
+    font-size: 10px;
+}
+
+.ah {
+    margin-top: auto;
+}
+
+.yaga {
+    margin-top: 30%;
+}
+
+.invisible {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
