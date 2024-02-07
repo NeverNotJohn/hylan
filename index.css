@@ -1,8 +1,21 @@
 body {
-    background-color: #ff5455;
+    background-color: #fe5454;
 }
 
+.center-containerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
 
+.v-center {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40vh;
+}
 
 .text {
     text-align: center;
@@ -26,11 +39,46 @@ body {
     height: 15vh;
 }
 
-/* Ids*/
-
-#start {
-    
+.hide {
+    display: none;
 }
+
+.white {
+    color: white;
+}
+
+#clap {
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #FFFFFF; /* Bootstrap primary color */
+    color: #000; /* Text color */
+    transition: transform 0.3s ease-in-out;
+    height: 15vh;
+}
+
+#vid1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+#vid2 {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+
+/* Ids*/
 
 #text {
     text-align: center;
@@ -38,3 +86,9 @@ body {
     color: black;
     margin-top: 10vh;
 }
+
+#butt {
+    width: 10vh;
+    border-radius: 10px;
+}
+
