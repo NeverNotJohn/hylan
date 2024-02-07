@@ -9,6 +9,9 @@ const end = document.getElementById('final');
 
 
 const video = document.getElementById('vid1');
+video1.setAttribute("playsinline", true);
+video2.setAttribute("playsinline", true);
+
 
 let clapsound = document.getElementById('clapsound');
 var start = 0;
@@ -38,6 +41,7 @@ let L = 0;
 
 function clapSound() {
    
+    clapsound.play();
     
     var now = Date.now();
     var dif = now - start;
