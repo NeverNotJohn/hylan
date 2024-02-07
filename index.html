@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title> Ur old </title>
-    <link rel="icon" href="static/images/but.png">
+    <link rel="icon" href="">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
   </head>
+
+  <audio id="clapsound"src="static/audio/clap.mp3"></audio>
 
   <body>
 
@@ -48,7 +50,15 @@
         <img id="butt" src="static/images/clap.png" alt="">
       </button>
 
+      <div class="mt-5">
+        <button id="startBut" onclick="gameStart()" class="new-line-block bubble-button block">
+          Start game!
+        </button>
+      </div>
+
     </div>
+
+  
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
