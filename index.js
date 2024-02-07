@@ -37,7 +37,7 @@ let mid = 0;
 let L = 0;
 
 function clapSound() {
-    clapsound.play();
+   
     
     var now = Date.now();
     var dif = now - start;
