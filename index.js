@@ -5,7 +5,10 @@ const video2 = document.getElementById('vid2');
 const prepButton = document.getElementById('two');
 const prepText = document.getElementById('prepText');
 const gameBut = document.getElementById('startBut');
+const end = document.getElementById('final');
 
+
+const video = document.getElementById('vid1');
 
 let clapsound = document.getElementById('clapsound');
 var start = 0;
@@ -108,3 +111,14 @@ async function gameStart() {
     start = Date.now();
 
 }
+
+// End of game
+
+video.addEventListener("ended", function() {
+    video1.style.display = 'none';
+    video2.style.display = 'none';
+    prepButton.style.display = 'none';
+
+    final.classList.remove('hide');
+    
+  });
