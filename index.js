@@ -7,6 +7,11 @@ const prepText = document.getElementById('prepText');
 const gameBut = document.getElementById('startBut');
 const end = document.getElementById('final');
 
+const m = document.getElementById('M');
+const n = document.getElementById('N');
+const o = document.getElementById('O');
+const p = document.getElementById('P');
+
 
 const video = document.getElementById('vid1');
 video1.setAttribute("playsinline", true);
@@ -40,7 +45,7 @@ let mid = 0;
 let L = 0;
 
 function clapSound() {
-   
+
     clapsound.play();
     
     var now = Date.now();
@@ -51,6 +56,7 @@ function clapSound() {
         return;
     }
 
+    let tex = "";
     lastPlay = now;
 
     for (let i = 0; i < 4; i++)
@@ -61,6 +67,7 @@ function clapSound() {
         {
             prepText.textContent = "Marvelous!!!";
             console.log("nice");
+            tex = "POG 🎉"
             marv++;
             break;
         } else if (skeet <= 90) // Perfect +- 60 ms
@@ -68,12 +75,14 @@ function clapSound() {
             prepText.textContent = "Perfect!!";
             console.log('cool');
             perf++;
+            tex = "Lez Gooo!";
             break;
         } else if (skeet <= 120) // mid +- 100 ms
         {
             prepText.textContent = "Mid!";
             console.log('lol');
             mid++;
+            tex = "Hahahaa fuck you";
             break;
         } else       // Fucking Terrible +- >90
         {
@@ -82,9 +91,22 @@ function clapSound() {
                 prepText.textContent = "L 🗿";
                 console.log('L');
                 L++;
+                tex = "L+ Ratio";
             }
         }
     }
+
+    // Create Text
+
+    const animatedText = document.createElement('div');
+    animatedText.textContent = tex;
+    animatedText.className = 'animated-text';
+
+    // Set random initial positions
+    animatedText.style.left = Math.random() * 100 + 'vw';
+    animatedText.style.top = Math.random() * 100 + 'vh';
+
+    document.body.appendChild(animatedText);
 
 
 }
@@ -96,6 +118,34 @@ function clapSound() {
 async function gamePrep() {
     prepButton.classList.remove('hide');
 
+}
+
+function applyRainbowEffect(elementId) {
+    var rainbowText = document.getElementById(elementId);
+
+    if (rainbowText) {
+        var text = rainbowText.innerText;
+        var colors = ['#ff0000', '#ff9900', '#ffff00', '#33cc33', '#3399ff', '#9933ff', '#ff33cc'];
+        var interval = 500; // Change color every 500 milliseconds
+        var index = 0;
+
+        function updateColors() {
+            var spannedText = '';
+
+            for (var i = 0; i < text.length; i++) {
+                var char = text.charAt(i);
+                var color = colors[(i + index) % colors.length];
+                spannedText += '<span style="color: ' + color + ';">' + char + '</span>';
+            }
+
+            rainbowText.innerHTML = spannedText;
+            index = (index + 1) % colors.length;
+        }
+
+        // Initial call and setup the interval
+        updateColors();
+        setInterval(updateColors, interval);
+    }
 }
 
 // Actual Game Start
@@ -114,7 +164,10 @@ async function gameStart() {
 
     start = Date.now();
 
+
 }
+
+
 
 // End of game
 
@@ -124,5 +177,12 @@ video.addEventListener("ended", function() {
     prepButton.style.display = 'none';
 
     final.classList.remove('hide');
+
+    m.textContent = `Marvelous: ${marv}`;
+    n.textContent = `perfect: ${perf}`;
+    o.textContent = `Mid: ${mid}`;
+    p.textContent = `L's Taken: ${L}`;
+
+    applyRainbowEffect('haha');
     
   });
